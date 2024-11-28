@@ -15,31 +15,31 @@ const NumberTickers = () => {
             </CardHeader>
             <Separator />
             <CardContent className='grid grid-cols-2 md:flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 pt-4'>
-            <div className='flex flex-col items-start justify-center gap-2'>
+            <div className='flex flex-col items-start md:items-center justify-center gap-2'>
               <h3 className='text-xl text-muted-foreground'>Projects Built</h3>
               <h1 className='text-4xl font-bold'>
                 <NumberTicker value={30}/>
               </h1>
             </div>
-            <div className='flex flex-col items-start justify-center gap-2'>
+            <div className='flex flex-col items-start md:items-center justify-center gap-2'>
               <h3 className='text-xl text-muted-foreground'>Open Source Contributions</h3>
               <h1 className='text-4xl font-bold'>
                 <NumberTicker value={14}/>
               </h1>
             </div>
-            <div className='flex flex-col items-start justify-center gap-2'>
+            <div className='flex flex-col items-start md:items-center justify-center gap-2'>
               <h3 className='text-xl text-muted-foreground'>Github Repos</h3>
               <h1 className='text-4xl font-bold'>
                 <NumberTicker value={42}/>
               </h1>
             </div>
-            <div className='flex flex-col items-start justify-center gap-2'>
+            <div className='flex flex-col items-start md:items-center justify-center gap-2'>
               <h3 className='text-xl text-muted-foreground'>Github Issues Raised</h3>
               <h1 className='text-4xl font-bold'>
                 <NumberTicker value={27}/>
               </h1>
             </div>
-            <div className='flex flex-col items-start justify-center gap-2'>
+            <div className='flex flex-col items-start md:items-center justify-center gap-2'>
               <h3 className='text-xl text-muted-foreground'>Github PRs</h3>
               <h1 className='text-4xl font-bold'>
                 <NumberTicker value={18}/>

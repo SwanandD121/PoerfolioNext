@@ -4,7 +4,7 @@ import ContactMe from "./components/ContactMe";
 import Dock from "./components/Dock" 
 import Projects from "./components/Projects";
 import Sidebar from "./components/Sidebar";
-import NumberTickers from "./components/NumberTickers";
+import NumberTickers from "./components/Stats";
 import Particles from "@/components/magicui/particles";
 import AboutMe from "./components/AboutMe";
 import TechStack from "./components/TechStack";

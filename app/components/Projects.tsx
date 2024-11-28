@@ -7,7 +7,7 @@ import { Separator } from '@/components/ui/separator'
 
 const Projects = () => {
   return (
-    <div>
+    <div id='projects'>
         <section className='m-11 md:m-16 w-full md:w-[90%]'>
           <Card className='relative z-10 bg-stone-50 dark:bg-gray-900/40 shadow-md'>
           <BorderBeam duration={18} size={200} />

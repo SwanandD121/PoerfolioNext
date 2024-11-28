@@ -6,7 +6,7 @@ import { BorderBeam } from '@/components/magicui/border-beam';
 
 const TechStack = () => {
   return (
-    <div>
+    <div id='skills'>
         <div className='flex items-center justify-center m-11 md:m-16 w-full md:w-[90%]'>
           <Card className='relative bg-stone-50 dark:bg-gray-900/40 shadow-md pt-6'>
             <BorderBeam duration={18} size={200} />
