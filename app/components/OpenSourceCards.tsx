@@ -3,17 +3,17 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../comp
 import { Separator } from '../../components/ui/separator'
 import { Button } from '../../components/ui/button'
 import Link from 'next/link'
-import projectData  from './projectData'
+import openSourceData  from './openSourceData'
 import ShineBorder from '@/components/magicui/shine-border'
 import { BorderBeam } from '@/components/magicui/border-beam'
 import MovingGradient from '@/components/animata/background/moving-gradient'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import Image from 'next/image'
 
-const ProjectCards = () => {
+const OpenSourceCards = () => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            {projectData.map((project, index) => (
+            {openSourceData.map((project, index) => (
                 <Card key={index}>
                     <CardHeader className='text-3xl bg-gradient-to-r from-orange-400 to-purple-600 bg-clip-text text-transparent text-center font-bold '>
                         {project.name}
@@ -44,9 +44,6 @@ const ProjectCards = () => {
                         <Button>
                             <Link href={project.github}>Github</Link>
                         </Button>
-                        <Button>
-                            <Link href={project.demo}>Demo</Link>
-                        </Button>
                     </CardFooter>
                 </Card>
             ))}
@@ -54,4 +51,4 @@ const ProjectCards = () => {
   )
 }
 
-export default ProjectCards
+export default OpenSourceCards

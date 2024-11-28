@@ -8,6 +8,7 @@ import NumberTickers from "./components/Stats";
 import Particles from "@/components/magicui/particles";
 import AboutMe from "./components/AboutMe";
 import TechStack from "./components/TechStack";
+import OpenSourceProjs from "./components/OpenSourceProjs";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
           <NumberTickers/>
           {/* <Projects /> */}
           <Projects />
+          <OpenSourceProjs />
 
           <ContactMe />
         </div>
