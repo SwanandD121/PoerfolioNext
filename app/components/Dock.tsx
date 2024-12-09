@@ -1,21 +1,28 @@
-import React from "react";
-import Link from "next/link";
-import { CalendarIcon, Contact, HomeIcon, MailIcon, PencilIcon, User } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import React from "react"
+import Link from "next/link"
+import {
+  CalendarIcon,
+  Contact,
+  HomeIcon,
+  MailIcon,
+  PencilIcon,
+  User,
+} from "lucide-react"
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Dock, DockIcon } from "@/components/magicui/dock";
-import ThemeSwitch from "./ThemeSwitch";
-import ShineBorder from "@/components/magicui/shine-border";
+} from "@/components/ui/tooltip"
+import { Dock, DockIcon } from "@/components/magicui/dock"
+import ThemeSwitch from "./ThemeSwitch"
+import ShineBorder from "@/components/magicui/shine-border"
 // import { ModeToggle } from "@/components/mode-toggle";
 
-export type IconProps = React.HTMLAttributes<SVGElement>;
+export type IconProps = React.HTMLAttributes<SVGElement>
 
 const Icons = {
   calendar: (props: IconProps) => <CalendarIcon {...props} />,
@@ -60,52 +67,84 @@ const Icons = {
     </svg>
   ),
   resume: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
-      <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-      <path d="M10 9H8"/>
-      <path d="M16 13H8"/>
-      <path d="M16 17H8"/>
-    
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+      <path d="M10 9H8" />
+      <path d="M16 13H8" />
+      <path d="M16 17H8" />
     </svg>
   ),
   contact: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
   ),
-};
+}
 
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: User, label: "Contact" },
+    { 
+      href: "#", 
+      icon: HomeIcon, 
+      label: "Home" 
+    },
+    { 
+      href: "#contact", 
+      icon: User, 
+      label: "Contact" 
+    },
   ],
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/SwanandD121",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/swananddeshpande121/",
         icon: Icons.linkedin,
       },
       Resume: {
         name: "Resume",
-        url: "#",
+        url: "https://drive.google.com/file/d/17TpyamTpQjctcHAVwPL_MohaAqfrfxGK/view?usp=sharing",
         icon: Icons.resume,
       },
     },
   },
-};
+}
 
 export default function DockDemo() {
   return (
     <div className="flex fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 mb-10 backdrop-blur-lg">
-      <ShineBorder className="py-1 px-[1px] h-10 flex items-center"
+      <ShineBorder
+        className="py-1 px-[1px] h-10 flex items-center"
         borderRadius={13}
-        color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
+        color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+      >
         <Dock direction="middle">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
@@ -116,7 +155,7 @@ export default function DockDemo() {
                       href={item.href}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full",
+                        "size-12 rounded-full"
                       )}
                     >
                       <item.icon className="size-4" />
@@ -139,7 +178,7 @@ export default function DockDemo() {
                       href={social.url}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full",
+                        "size-12 rounded-full"
                       )}
                     >
                       <social.icon className="size-4" />
@@ -168,5 +207,5 @@ export default function DockDemo() {
         </Dock>
       </ShineBorder>
     </div>
-  );
+  )
 }
